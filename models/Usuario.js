@@ -13,10 +13,19 @@ const UsuarioSchema = mongoose.Schema({
         required: true,
         unique: true
     },
+    apellido: {
+        type: String,
+        trim: true,
+        required: [true],
+    },
     password: {
         type: String,
         required: true
-    }
+    },
+    telefono: {
+        type: String,
+        required: [true]
+    },
 }, {
     timestamps: true 
 })

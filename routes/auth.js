@@ -14,7 +14,9 @@ const auth = require('./../middleware/auth');
 router.post("/register",
     [
         // checks si son true, avanzan, si son false, ejecutan el mensaje de error
-        check("nombre", "El nombre es obligatorio").not().isEmpty(),   // req, res
+        check("nombre", "El nombre es obligatorio").not().isEmpty(),   
+        check("telefono", "El telefono es obligatorio").not().isEmpty(),
+        check("apellido", "El apellido es obligatorio").not().isEmpty(),  
         check("email", "Agrega un email válido").isEmail(),
         check("password", "El password debe tener mínimo de 6 caracteres").isLength({ min: 6 })
     ]
