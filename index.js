@@ -4,6 +4,7 @@ const cors = require('cors');
 const app = express();
 const conectarDB = require('./config/db');
 const authRoutes = require('./routes/auth');
+const publicacionesRoutes = require('./routes/publicaciones');
 
 require('dotenv').config({
     path: '.env'
@@ -21,8 +22,11 @@ app.use(express.json({
 //3.RUTEO
 
 
-// B. Autenticación
+// A. Autenticación
 app.use('/api/auth', authRoutes)
+
+// B. Publicaciones
+app.use('/publicaciones', publicacionesRoutes)
 
 
 
