@@ -41,6 +41,6 @@ app.use('/publicaciones', publicacionesRoutes)
 
 //4.SERVIDOR
 
-app.listen(4000, () => {
+app.listen(process.env.PORT, () => {
     console.log("el servidor corriendo");
 })
