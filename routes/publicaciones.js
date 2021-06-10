@@ -19,7 +19,7 @@ const auth = require('./../middleware/auth');
 router.get("/", auth, publicacionesController.lista);
 
 
-// Crear publicacionn
+// Crear publicacionnn
 // /publicaciones - POST
 // localhost:4000/crear
 router.post("/crear", [
