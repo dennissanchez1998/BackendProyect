@@ -66,3 +66,24 @@ exports.crearPublicacion = async (req, res) => {
 
 
 }
+
+
+exports.detalle = async (req, res) => {
+
+    console.log(req.params);
+    const {
+        id
+      } = req.params;
+
+    try {
+
+        const respuesta = await Publicacion.findById(id).populate('usuario')
+        console.log(respuesta);
+        
+        res.json({
+            publicacion:respuesta
+        })
+    } catch (error) {
+        console.log(error);
+    }
+}

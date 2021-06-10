@@ -36,6 +36,12 @@ router.post("/crear", [
     
 ], auth, publicacionesController.crearPublicacion);
 
+// Detalle de publicacion
+// /publicaciones - GET
+// (ÉL YA INICIO SESIÓN Y ME VA A MOSTRAR TOKEN)
+// localhost:4000/:id
+router.get("/:id", auth, publicacionesController.detalle);
+
 
 
 

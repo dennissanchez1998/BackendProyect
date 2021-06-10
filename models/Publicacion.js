@@ -9,7 +9,7 @@ const PublicacionSchema = mongoose.Schema({
     },
     categoria: {
         type: String,
-        enum: ["Carros, Motos y Otros", 'Celulares y Teléfonos', "Animales", "Cámaras y Accesorios", "Computación", "Consolas y Videojuegos"]
+        enum: ["Carros, Motos y Otros", 'Celulares y Teléfonos', "Animales", "Cámaras y Accesorios", "Computación", "Consolas y Videojuegos","Cosméticos","Salud y Vida","Libros","Arte"]
     },
     descripcion: {
         type: String
