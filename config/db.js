@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const conectarDB = async () => {
     
     try {
-        await mongoose.connect(`mongodb://localhost:27017/mercadoLibre`, {
+        await mongoose.connect(process.env.DB || `mongodb://localhost:27017/mercadoLibre`, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useFindAndModify:false
