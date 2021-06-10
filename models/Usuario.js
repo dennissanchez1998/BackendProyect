@@ -27,7 +27,7 @@ const UsuarioSchema = mongoose.Schema({
         required: [true]
     },
 }, {
-    timestamps: true 
+    timestamps: true
 })
 
 // MODELO
@@ -35,4 +35,3 @@ const Usuario = mongoose.model("Usuario", UsuarioSchema)
 
 // EXPORTACIÓN
 module.exports = Usuario
-
